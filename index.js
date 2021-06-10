@@ -26,8 +26,8 @@ const questions = [
     },
     {
         type: "List",
-        //choices
         message: "Please select a license for your application",
+        choices: ["Apache", "GNU", "ISC", "MIT"]
         name: "license"
     },
     {
