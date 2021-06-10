@@ -85,19 +85,19 @@ init();
 Notes:
 1. A command-line application that accepts user input
 2. Prompts for:
-    -Title of my project
+    -Title of my project - Done
     -Sections:
-        -Description
-        -Table of Contents:
-            -Links to the corresponding section
-        -Installation
-        -Usage
-        -License(from a list of options):
+        -Description - Done
+        -Table of Contents: - Done
+            -Links to the corresponding section - Done
+        -Installation - Done
+        -Usage - Done
+        -License(from a list of options): 
             -Badge for that licence is added near the top of the readme
             -Notice explaining which license the application is covered under
-        -Contributing Guidelines
-        -Test Instructions
+        -Contributing Guidelines - Done
+        -Test Instructions - Done
         -Questions:
-            -GitHub user name and profile link
-            -email with instructions how to reach me?
+            -GitHub user name and profile link - Done
+            -email with instructions how to reach me? - Done
 */

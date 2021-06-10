@@ -19,9 +19,32 @@ function generateMarkdown(response) {
   ## Descrition 
   ${response.description}
 
+  ## Table of Contents
+  [Installation](#installation)
+  [Usage](#usage)
+  [Licensee](#license)
+  [Contribution Guidelines](#contribution guidelines)
+  [Test Instructions](#test instructions)
+  [Questions](#questions)
 
+  ## Installation
+  ${response.installation}
 
+  ## License
 
+  ## Contribution Guidelines
+  ${response.contributions}
+
+  ## Test Instructions
+  ${response.test}
+
+  ## Questions
+  ${response.contactInstructions}
+
+  ${response.email}
+  ${response.githubProfile}
+
+  ${response.githubUsername}
 `;
 }
 
