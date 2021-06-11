@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(response) {
-  switch(response) {
+  switch (response) {
     case "Apache":
       return `![Apache Badge](https://img.shields.io/badge/License-Apache-blue)`;
     case "GNU":
@@ -13,33 +13,45 @@ function renderLicenseBadge(response) {
     default:
       return "";
   }
-}
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(response) {
-  switch(response) {
+  switch (response) {
     case "Apache":
-      return `The license for this application is the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)`;
+      return `[Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)`;
     case "GNU":
-      return `The license for this application is the [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)`;
+      return `[GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)`;
     case "ISC":
-      return `The license for this application is the [ISC License](https://choosealicense.com/licenses/isc/)`;
+      return `[ISC License](https://choosealicense.com/licenses/isc/)`;
     case "MIT":
-      return `The license for this application is the [MIT License](https://choosealicense.com/licenses/mit/)`;
+      return `[MIT License](https://choosealicense.com/licenses/mit/)`;
     default:
       return "";
   }
-
-}
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(response) {
+  switch (response) {
+    case "Apache":
+      return `The license for this project is ${renderLicenseLink}`;
+    case "GNU":
+      return `The license for this project is ${renderLicenseLink}`;
+    case "ISC":
+      return `The license for this project is ${renderLicenseLink}`;
+    case "MIT":
+      return `The license for this project is ${renderLicenseLink}`;
+    default:
+      return "";
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
-  
+
   return `${(renderLicenseBadge(response.license))}
   # ${response.title}
 
@@ -49,7 +61,7 @@ function generateMarkdown(response) {
   ## Table of Contents
   [Installation](#installation)
   [Usage](#usage)
-  [Licensee](#license)
+  [License](#license)
   [Contribution Guidelines](#contribution guidelines)
   [Test Instructions](#test instructions)
   [Questions](#questions)
@@ -75,4 +87,4 @@ function generateMarkdown(response) {
 `;
 }
 
-module.exports = {generateMarkdown};
+module.exports = { generateMarkdown };
