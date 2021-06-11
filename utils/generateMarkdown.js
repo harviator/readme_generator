@@ -1,20 +1,15 @@
-const license = response.license;
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  switch(license) {
+function renderLicenseBadge(response) {
+  switch(response) {
     case "Apache":
       return `![Apache Badge](https://img.shields.io/badge/License-Apache-blue)`;
-      break;
     case "GNU":
       return `![GNU Badge](https://img.shields.io/badge/License-GNU-red)`;
-      break;
     case "ISC":
       return `![ISC Badge](https://img.shields.io/badge/License-ISC-orange)`;
-      break;
     case "MIT":
       return `![MIT Badge](https://img.shields.io/badge/License-MIT-green)`;
-      break;
     default:
       return "";
   }
@@ -22,7 +17,19 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
+function renderLicenseLink(response) {
+  switch(response) {
+    case "Apache":
+      return `The license for this application is the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)`;
+    case "GNU":
+      return `The license for this application is the [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)`;
+    case "ISC":
+      return `The license for this application is the [ISC License](https://choosealicense.com/licenses/isc/)`;
+    case "MIT":
+      return `The license for this application is the [MIT License](https://choosealicense.com/licenses/mit/)`;
+    default:
+      return "";
+  }
 
 }
 
@@ -33,7 +40,7 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
   
-  return `${renderLicenseBadge}
+  return `${(renderLicenseBadge(response.license))}
   # ${response.title}
 
   ## Descrition 
@@ -68,4 +75,4 @@ function generateMarkdown(response) {
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown};
