@@ -68,6 +68,9 @@ function generateMarkdown(response) {
   ## Installation
   ${response.installation}
 
+  ## Usage
+  ${response.usage}
+
   ## License
   ${renderLicenseSection(response.license)}
 
