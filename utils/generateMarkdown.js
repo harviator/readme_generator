@@ -54,7 +54,7 @@ function generateMarkdown(response) {
   return `${(renderLicenseBadge(response.license))}
   # ${response.title}
 
-  ## Descrition 
+  ## Description 
   ${response.description}
 
   ## Table of Contents
@@ -85,9 +85,9 @@ function generateMarkdown(response) {
 
   ${response.email}
   
-  ${response.githubProfile}
+  GitHub Profile: ${response.githubProfile}
 
-  ${response.githubUsername}
+  GitHub Username: ${response.githubUsername}
 `;
 }
 
