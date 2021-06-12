@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: "input",
@@ -63,7 +63,7 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
     
     fs.writeFile(fileName, data, err => {
@@ -71,7 +71,7 @@ function writeToFile(fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer.prompt(questions).then((response) => {
 
@@ -86,24 +86,3 @@ function init() {
 
 // Function call to initialize app
 init();
-
-/*
-Notes:
-1. A command-line application that accepts user input
-2. Prompts for:
-    -Title of my project - Done
-    -Sections:
-        -Description - Done
-        -Table of Contents: - Done
-            -Links to the corresponding section - Done
-        -Installation - Done
-        -Usage - Done
-        -License(from a list of options): 
-            -Badge for that licence is added near the top of the readme
-            -Notice explaining which license the application is covered under
-        -Contributing Guidelines - Done
-        -Test Instructions - Done
-        -Questions:
-            -GitHub user name and profile link - Done
-            -email with instructions how to reach me? - Done
-*/
