@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// A function that returns a license badge based on which license is passed in
 function renderLicenseBadge(response) {
   switch (response) {
     case "Apache":
@@ -15,10 +14,9 @@ function renderLicenseBadge(response) {
   }
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// A function that returns the license link
 function renderLicenseLink(response) {
-  console.log(``)
+
   switch (response) {
     case "Apache":
       return `[Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)`;
@@ -33,10 +31,9 @@ function renderLicenseLink(response) {
   }
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// A function that returns the license section of README
 function renderLicenseSection(response) {
-  console.log(response);
+  
   switch (response) {
     case "Apache":
       return `The license for this project is ${renderLicenseLink(response)}`;
@@ -51,10 +48,8 @@ function renderLicenseSection(response) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// A function to generate markdown for README
 function generateMarkdown(response) {
-
-  console.log(response.license);
 
   return `${(renderLicenseBadge(response.license))}
   # ${response.title}
@@ -86,6 +81,7 @@ function generateMarkdown(response) {
   ${response.contactInstructions}
 
   ${response.email}
+  
   ${response.githubProfile}
 
   ${response.githubUsername}
