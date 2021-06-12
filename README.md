@@ -1,7 +1,7 @@
 ![MIT Badge](https://img.shields.io/badge/License-MIT-green)
   # README Generator
 
-  ## Descrition 
+  ## Description 
   This was a homework assignment for the UofT Bootcamp.  The application prompts the user for data which it uses to generate a clean and polished README file.  Node.js and Inquirer.js are the two main technologies used on the application.
 
   ## Table of Contents
@@ -33,11 +33,14 @@
   ## Test Instructions
   There are no test instructions at this time.
 
+  ## Screen Shot
+  ![Screen Shot](./assets/images/screen-shot.png)
+
   ## Questions
   Please feel free to email me.
 
   harviator@gmail.com
   
-  https://github.com/harviator
+  GitHub Profile: https://github.com/harviator
 
-  harviator
+  GitHub Username: harviator
